@@ -4,16 +4,13 @@ description = 'path drawables for refresh animations'
 
 android {
 
-    compileSdkVersion 28
+    compileSdkVersion 30
 
     defaultConfig {
         minSdkVersion 16
-        targetSdkVersion 28
+        targetSdkVersion 30
         versionCode 1
         versionName "1.0"
-
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
-
     }
     buildTypes {
         release {
@@ -28,13 +25,9 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
-    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
-        exclude group: 'com.android.support', module: 'support-annotations'
-    })
-    testImplementation 'junit:junit:4.12'
 
     api project(':refresh-drawable-paint')
-    compileOnly 'com.android.support:support-v4:28.0.0'
+    compileOnly 'androidx.legacy:legacy-support-v4:1.0.0'
 }
 
 
